@@ -6,8 +6,6 @@ This program summarizes hourly temperature and precipitation records for Toronto
 
 https://api.open-meteo.com/v1/forecast?latitude=43.65&longitude=-79.38&hourly=temperature_2m,precipitation&past_days=7&forecast_days=0&timezone=America/Toronto
 
-The program downloads hourly temperature and precipitation records for the past 7 days.
-
 ## Setup
 
 Create and activate a virtual environment:
