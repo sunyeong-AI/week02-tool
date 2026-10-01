@@ -69,4 +69,8 @@ The API provides hourly records, so the same date appears many times. I extracte
 
 ## Known Limitations
 
-The program only analyzes the past 7 days of weather data. The analysis period cannot be selected by the user. With more time, I would allow users to specify a start date and an end date for the analysis.
+If invalid values occur, the number of processed records may be different from the number of records received from the API. With more time, I would count a record only when its temperature and precipitation values are both valid.
+
+```python
+"record_count": len(records["hourly"]["time"]),
+```
