@@ -1,8 +1,8 @@
 # Weather Records Aggregation
 
-This project uses the Open-Meteo weather API for Toronto, Ontario.
+This program summarizes hourly temperature and precipitation records for Toronto into daily minimum, maximum, mean temperature, and total precipitation. This is useful because it makes the hourly weather data easier to understand and compare by day.
 
-Source:
+## Data Source
 
 https://api.open-meteo.com/v1/forecast?latitude=43.65&longitude=-79.38&hourly=temperature_2m,precipitation&past_days=7&forecast_days=0&timezone=America/Toronto
 
