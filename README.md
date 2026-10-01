@@ -3,6 +3,7 @@
 This project uses the Open-Meteo weather API for Toronto, Ontario.
 
 Source:
+
 https://api.open-meteo.com/v1/forecast?latitude=43.65&longitude=-79.38&hourly=temperature_2m,precipitation&past_days=7&forecast_days=0&timezone=America/Toronto
 
 The program downloads hourly temperature and precipitation records for the past 7 days.
@@ -14,8 +15,13 @@ Create and activate a virtual environment:
 ```bash
 python -m venv .venv
 .venv\Scripts\activate
+```
 
+Install the required packages:
+
+```bash
 pip install -r requirements.txt
+```
 
 ## Run
 
@@ -23,6 +29,7 @@ Run the program from the project directory:
 
 ```bash
 python weather_records.py
+```
 
 The program downloads the weather records, calculates daily temperature and precipitation summaries, and writes the results to summary.json.
 
@@ -45,7 +52,7 @@ After running the program, `summary.json` is created:
     "2026-09-24": 0.0
   }
 }
-
+```
 ## Data Quirks
 
 The API provides hourly records, so the same date appears many times. I extracted the date from each timestamp and grouped the hourly records by date. I also used a set comprehension to remove duplicate dates and count the number of days processed.
